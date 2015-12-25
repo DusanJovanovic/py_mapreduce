@@ -1,3 +1,4 @@
+#!/usr/local/bin/python
 """
 Mapper for a Udacity Hadoop course
 """
