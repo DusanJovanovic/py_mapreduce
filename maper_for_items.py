@@ -12,4 +12,4 @@ for line in sys.stdin:
             date, time, store, item, cost, payment = data
         # Now print out the data that will be passed to the reducer
             if item in ["Toys", "Consumer Electronics"]:
-            print "{0}\t{1}".format(item, cost)
+                print "{0}\t{1}".format(item, cost)
