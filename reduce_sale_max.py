@@ -5,7 +5,7 @@ Reducer file
 
 import sys
 
-salesMax = 0
+salesMax = 0.0
 oldKey = None
 
 for line in sys.stdin:
@@ -15,10 +15,11 @@ for line in sys.stdin:
         continue
 
     thisKey, thisSale = data
+    thisSale = float(thisSale)
     if oldKey and oldKey != thisKey:
         print oldKey, "\t", salesMax
         oldKey = thisKey
-        salesMax = 0
+        salesMax = 0.0
 
     oldKey = thisKey
     if thisSale > salesMax:
