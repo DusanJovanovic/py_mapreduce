@@ -1,4 +1,4 @@
-#!/usr/local/bin/env python
+#!/usr/bin/env python
 """
 Mapper for a Udacity Hadoop course
 """
