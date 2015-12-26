@@ -9,6 +9,7 @@ count_ip = 0
 max_count = 0
 max_path = None
 count_address = 0
+count_address1 = 0
 dct ={}
 for line in sys.stdin:
     data = line.strip().split("\t")
@@ -27,6 +28,8 @@ for line in sys.stdin:
         count_ip += 1
     if path == "/assets/js/the-associates.js":
         count_address += 1
+    if path == "/assets/css/combined.css":
+        count_address1 += 1
 
 
 print max_path, "\t", max_count
@@ -34,3 +37,5 @@ print "No, of 10.99.99.186 hits:"
 print count_ip
 print "No, of /assets/js/the-associates.js:"
 print count_address
+print "/assets/css/combined.css"
+print count_address1
