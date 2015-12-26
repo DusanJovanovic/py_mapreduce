@@ -5,12 +5,11 @@ Reducer file
 
 import sys
 
-count = 0
 count_ip = 0
-oldKey = None
 max_count = 0
 max_path = None
 count_address = 0
+dct ={}
 for line in sys.stdin:
     data = line.strip().split("\t")
     if len(data) != 2:
@@ -20,15 +19,10 @@ for line in sys.stdin:
     ip, path = data
     if "http://wwww.the-associates.co.uk" in path:
         path = path.replace("http://wwww.the-associates.co.uk", "")
-    if oldKey and oldKey != path:
-        if count > max_count:
-            max_count = count
-            max_path = oldKey
-        oldKey = path
-        count = 0
-
-    oldKey = path
-    count += 1
+    dct[path] = dct.get(path,0) + 1
+    if dct[path] > max_count:
+        max_count = dct[path]
+        max_path = path
     if ip == "10.99.99.186":
         count_ip += 1
     if path == "/assets/js/the-associates.js":
