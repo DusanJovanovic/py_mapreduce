@@ -11,6 +11,8 @@ for line in sys.stdin:
     if len(data) == 10:
         ip, client_id, client_uname, date_time, time_zone, get, path, req, status, size = data
     # Now print out the data that will be passed to the reducer
+        if "http://wwww.the-associates.co.uk" in path:
+            path = path.replace("http://wwww.the-associates.co.uk", "")
         print "{0}\t{1}".format(ip, path)
 
 ##with open("pypy.txt", "r") as infile:

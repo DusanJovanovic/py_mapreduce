@@ -17,8 +17,8 @@ for line in sys.stdin:
         continue
 
     ip, path = data
-    if "http://wwww.the-associates.co.uk" in path:
-        path = path.replace("http://wwww.the-associates.co.uk", "")
+##    if "http://wwww.the-associates.co.uk" in path:
+##        path = path.replace("http://wwww.the-associates.co.uk", "")
     dct[path] = dct.get(path,0) + 1
     if dct[path] > max_count:
         max_count = dct[path]
