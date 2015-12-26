@@ -28,7 +28,7 @@ for line in sys.stdin:
         count_ip += 1
     if path == "/assets/js/the-associates.js":
         count_address += 1
-    if path == "/assets/css/combined.css":
+    if "assets/css/combined.css" in path:
         count_address1 += 1
 
 
