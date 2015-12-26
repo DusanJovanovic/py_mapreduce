@@ -18,6 +18,8 @@ for line in sys.stdin:
         continue
 
     ip, path = data
+    if "http://wwww.the-associates.co.uk" in path:
+        path = path.replace("http://wwww.the-associates.co.uk", "")
     if oldKey and oldKey != path:
         if count > max_count:
             max_count = count
