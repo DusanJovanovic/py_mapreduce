@@ -37,4 +37,4 @@ print max_path, "\t", max_count
 print "No, of 10.99.99.186 hits:"
 print count_ip
 print "No, of /assets/js/the-associates.js:"
-print count_ip
+print count_address
