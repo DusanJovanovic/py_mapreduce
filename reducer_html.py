@@ -11,6 +11,7 @@ max_path = None
 count_address = 0
 count_address1 = 0
 dct ={}
+pts = []
 for line in sys.stdin:
     data = line.strip().split("\t")
     if len(data) != 2:
@@ -29,6 +30,8 @@ for line in sys.stdin:
     if path == "/assets/js/the-associates.js":
         count_address += 1
     if "assets/css/combined.css" in path:
+        if path not in pts:
+            pts.append(path)
         count_address1 += 1
 
 
