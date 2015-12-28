@@ -42,3 +42,4 @@ print "No, of /assets/js/the-associates.js:"
 print count_address
 print "/assets/css/combined.css"
 print count_address1
+print pts
